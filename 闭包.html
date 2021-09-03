@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 闭包做缓存
+        // function eater() {
+        //     var food = '';
+        //     var obj = {
+        //         eat: function () {
+        //             console.log('i am eating' + food);
+        //         },
+        //         push: function (myFood) {
+        //             food = myFood;
+        //         }
+        //     }
+        //     return obj;
+        // }
+        // var eater1 = eater()
+        // 立即执行函数
+        // (function (a, b) {
+        //     console.log(a + b)
+        // }(1, 2))
+        // + function test() {
+        //     console.log('a')
+        // }()
+        // function test() {
+        //     var arr = [];
+        //     for (var i = 0; i < 10; i++) {
+        //         (function (i) {
+        //             arr[i] = function () {
+        //                 console.log(i + ' ');
+        //             }
+        //         })(i)
+        //     }
+        //     return arr;
+        // }
+        // var myArr = test();
+        // for (let i = 0; i < myArr.length; i++) {
+        //     myArr[i]()
+
+        // }
+    </script>
+</body>
+
+</html>
