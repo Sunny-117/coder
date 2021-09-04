@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>my demo</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// var str = 'asnia';
+		// function getByteLength(str) {
+		// 	var result = str.length;
+		// 	for (var i = 0; i < str.length; i++) {
+  //  				if(str[i].charCodeAt()>255){
+  //  					result++;
+  //  				}
+		// 	}
+		// 	return result;
+		// }
+		// console.log(getByteLength(str))
+
+		// function Person(name, sex){
+		// 	this.name = name;
+		// 	this.sex = sex;
+		// }
+		// var person = new Person('abc','female');
+		// Person.prototype.toString = function() {
+		// 	return 'hehe'
+		// };
+
+		// Father.prototype.lastName = 'deng';
+		// function Father() {
+
+		// }
+		// function Son() {
+
+		// }
+		// function inherit(Target, Origin) {
+		// 	function F(){}
+		// 	F.prototype = Origin.prototype;
+		// 	Target.prototype = new F();
+		// }
+		// inherit(Son, Father)
+		// var son = new Son()
+
+		// var inherit = (function() {
+		// 	var f = function() {}
+		// 	return function(Target, Origin) {
+		// 		F.prototype = Origin.prototype;
+		// 		Target.prototype = new F();
+		// 	}
+		// }())
+		var obj = {
+			name:'abc',
+			age:12,
+			address:{
+				province:'黑龙江'
+			}
+		}
+		for(let prop in obj) {
+			console.log(obj[prop])
+		}
+	</script>
+</body>
+</html>
