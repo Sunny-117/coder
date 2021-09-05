@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div id="section2">
+        <h2>版本咨询</h2>
+        <div class="container">
+            <ul class="tabBtn tabList">
+                <!-- 最外层选项卡的按钮 -->
+                <li class="active">最新活动</li>
+                <li>商城新品</li>
+            </ul>
+            <div class="tabContent con">
+                <!-- 最外层选项卡的内容 -->
+                <div class="active subTab_1">
+                    <!-- 最新活动的选项卡 -->
+                    <ul class="tabBtn">
+                        <!-- 最新活动的按钮 -->
+                        <li class="active">抢占据点</li>
+                        <li>烤鸡大师</li>
+                    </ul>
+                    <div class="tabContent">
+                        <!-- 最新活动的内容 -->
+                        <div class="active">
+                            <!-- 抢占据点的内容  -->
+                            <img src="images/img_04.jpg" alt="">
+                            <div class="text">
+                                <h3>11月22日-11月29日</h3>
+                                <p>活动期间，活动页面内每日首次占领任意据点可抽奖1次，传递给好友捷报前5名打开均可抽奖1次，有机会赢取永久深海格斗者套装，每日游戏内参与占点竞技更有累计奖励。</p>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- 烤鸡大师的内容 -->
+                            <img src="images/img_05.jpg" alt="">
+                            <div class="text">
+                                <h3>11月27日-12月8日</h3>
+                                <p>活动期间，通过完成日常任务收集“干柴”和“鸡”来制作烤鸡。每烤一份烤鸡，需要消耗一只鸡和多份干柴。每进行一次烤制，将消耗一份干柴，直至把鸡烤熟或烤焦，才会消耗下一只鸡。活动共有9个彩蛋勋章，收集任意6个彩蛋勋章可以激活烤鸡大师游戏称号（限时）。获得一定数量的烤鸡，可以兑换“阳光火鸡套装”。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subTab_2">
+                    <!-- 商城新品选项卡 -->
+                    <ul class="tabBtn">
+                        <li class="active">
+                            <img src="images/edition_01.png" alt="">
+                            <p>未来战士-套装</p>
+                        </li>
+                        <li>
+                            <img src="images/edition_02.png" alt="">
+                            <p>M24未来战士</p>
+                        </li>
+                        <li>
+                            <img src="images/edition_03.png" alt="">
+                            <p>S686未来战士</p>
+                        </li>
+                        <li>
+                            <img src="images/edition_04.png" alt="">
+                            <p>Scar-L未来战士</p>
+                        </li>
+                    </ul>
+                    <div class="tabContent">
+                        <div class="active">
+                            <img src="images/edition_05.png" alt="">
+                            <p>未来战士-套装</p>
+                        </div>
+                        <div>
+                            <img src="images/edition_02_big.png" alt="">
+                            <p>M24未来战士</p>
+                        </div>
+                        <div>
+                            <img src="images/edition_03_big.png" alt="">
+                            <p>S686未来战士</p>
+                        </div>
+                        <div>
+                            <img src="images/edition_04_big.png" alt="">
+                            <p>Scar-L未来战士</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //选项卡
+        (function () {
+            function tab(btn, content) {
+                var btns = btn.children; //获取到第一层的子元素
+                var cons = content.children;
+                for (var i = 0; i < btns.length; i++) { //循环的是所有的按钮
+                    btns[i].index = i; //给每一个按钮身上添加一个索引值
+                    btns[i].onclick = function () {
+                        //让别的元素身上的active去掉，让别的元素对应的内容隐藏
+                        for (var i = 0; i < btns.length; i++) { //循环所有元素
+                            //classList取到元素身上的所有class(集合对象)
+                            btns[i].classList.remove('active');
+                            cons[i].classList.remove('active');
+                        }
+                        //让自己身上加上active，让自己对应的内容显示
+                        this.classList.add('active');
+                        cons[this.index].classList.add('active');
+                    }
+                }
+            }
+
+            var tabBtns = document.querySelectorAll('.tabBtn'); //取到页面里所有的按钮的父级（3个）
+            var tabContents = document.querySelectorAll('.tabContent'); //取到页面里所有的内容（3个）
+
+            for (var i = 0; i < tabBtns.length; i++) {
+                tab(tabBtns[i], tabContents[i]);
+            }
+        })();
+    </script>
+</body>
+
+</html>
