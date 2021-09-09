@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// var n = 3;
+		// while(n-->0) {
+		// 	console.log(n)
+		// }
+		// var x = 1;
+		// switch (x) {
+		// 	case true:
+		// 		console.log("发生类型转换");
+		// 		break;
+		// 	default: 
+		// 		console.log("不发生类型转换");
+		// }
+		// // 不发生类型转换
+		// var n = 3;
+		// var even = (n%2===0)?console.log('是偶数'):console.log('是奇数')
+		// break continue
+		// break: 跳出循环；continue：跳出本次循环
+		// for (var i = 0; i < 10; i++) {
+		// 	console.log(i);
+		// 	continue;
+		// };
+		// var i = 0;
+		// while(i < 100) {
+		// 	// 打印奇数
+		// 	i++;
+		// 	if(i % 2 == 0) {
+		// 		continue;
+		// 	}
+		// 	console.log(i)
+		// // }
+		// label:{
+		// 	console.log('a')
+		// }
+		// var str = 'ancc';
+		// delete str[0]
+		// console.log(str)
+		// var obj = {
+		// 	a:1
+		// }
+
+		// var str = '\u8001\u9093\u8eab\u4f53\u597d';
+		// {
+		// 			console.log('a')
+		// }
+		// var obj = {
+		// 	name:'邓',
+		// 	age:40
+		// }
+		// var obj = Object.defineProperty({},'p',{
+		// 	value:'123',
+		// 	configurable:false
+		// })
+		// var obj = {};
+		// if('toString' in obj) {
+		// 	console.log(obj.hasOwnProperty('toString'))
+		// }
+
+		var obj = {
+			name:'abc',
+			age:123,
+			__proto__:{
+				lastName:'deng'
+			}
+		}
+		for(var prop in obj) {
+			if(obj.hasOwnProperty(prop)){
+				console.log(obj[prop])
+			}
+		}
+	</script>
+</body>
+</html>
