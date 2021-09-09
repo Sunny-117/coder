@@ -1,0 +1,120 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: absolute;
+			left: 100px;
+			top: 0;
+		}
+		button{
+			position: absolute;
+			top: 200px;
+		}
+		span{
+			margin-left: 300px;
+			height: 100px;
+			width: 2px;
+			background: green;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<span></span>
+	<button>点击</button>
+	<script type="text/javascript">
+		var div = document.getElementsByTagName('div')[0];
+		var btn = document.getElementsByTagName('button')[0];
+		var timer;
+		// btn.onclick = function () {
+		// 	clearInterval(timer);
+		// 	var speed = 300 - div.offsetLeft>0?7:-7;
+		// 	timer = setInterval(()=>{
+		// 		if(Math.abs(300 - div.offsetLeft) < Math.abs(speed)) {
+		// 			clearInterval(timer)
+		// 			div.style.left = '300px';
+		// 		}else{
+		// 			div.style.left = div.offsetLeft + speed + 'px';	
+		// 		}
+		// 	}, 20)
+
+		// }
+
+		// function startMove(dom, target) {
+		// 	clearInterval(timer);
+		// 	var speed = target - dom.offsetLeft>0?7:-7;
+		// 	timer = setInterval(()=>{
+		// 		if(Math.abs(target - dom.offsetLeft) < Math.abs(speed)) {
+		// 			clearInterval(timer)
+		// 			dom.style.left = target + 'px';
+		// 		}else{
+		// 			dom.style.left = dom.offsetLeft + speed + 'px';	
+		// 		}
+		// 	}, 20)
+		// }
+
+		// function startMove(dom, target) {
+		// 	clearInterval(timer);
+		// 	var speed = null;
+		// 	var timer = setInterval(()=>{
+		// 		if(Math.abs(target - div.offsetLeft)<Math.abs(speed) ){
+		// 			clearInterval(timer);
+		// // 		}else{
+		// // 			speed = (target - div.offsetLeft)/7;
+		// // 			div.style.left = div.offsetLeft + speed + 'px';
+		// // 		}
+		// // 	},20)
+		// // }
+		// // btn.onclick = function () {
+		// // 	startMove(div, 300)
+		// // }
+		// var div = document.getElementsByTagName('div')[0];
+		// var btn = document.getElementsByTagName('button')[0];
+		// function getStyle(dom, attr) {
+		// 	if(window.getComputedStyle) {
+		// 		return window.getComputedStyle(dom, null)[attr];
+		// 	}else{
+		// 		return dom.currentStyle[attr];
+		// 	}
+		// }
+		// var timer = null;
+		// var speed = null;
+		// var iCur = null;
+		// function startMove(dom, target) {
+		// 	clearInterval(timer);
+		// 	timer = setInterval(()=>{
+		// 		var iCur = parseFloat(getStyle(div, 'opacity'));
+		// 	speed = (target - iCur)/7;
+		// 	if(iCur == target) {
+		// 		clearInterval(timer);
+		// 	}else{
+		// 		dom.style.opacity = iCur + speed;
+		// 	}
+		// 	},20)
+		// }
+		// btn.onclick = function  () {
+		// 	startMove(div, 0.1)
+		// 	console.log('a')
+		// }
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
